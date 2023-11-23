@@ -8,13 +8,12 @@
   </head>
   <body>
     <header>
-        @include('layouts.header')
+      <h1>Header</h1>
     </header>
-    @include('layouts.nav')
     <div class="container">
         @yield('content')
     </div>
-    <footer>
+    <footer class="py-5 bg-dark">
         @include('layouts.footer')
     </footer>
     </div>

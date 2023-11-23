@@ -1,17 +1,22 @@
 @extends('layouts.app')
 
-@section('title',$title)
+@section('title', 'Login')
 
 @section('content')
-    <div class="container mt-5">
-        <div class="row justify-content-center">
+    <div class="container mt-5">   
+        <div class="row justify-content-center">       
         <div class="col-md-6">
             <div class="card">
             <div class="card-header">
                 <h2 class="text-center">Login</h2>
             </div>
-            <div class="card-body">
-                <form action="/process_login" method="post">
+                <div class="card-body">
+                @if (session('status'))
+                <div class="alert alert-danger ">
+                {{ session('message')}}
+                </div>
+                @endif
+                <form action="" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -23,7 +28,7 @@
                 </div>
                 <button type="submit" class="mt-3 btn btn-primary form-control">Login</button>
                 <div class="text-center">
-                    <a href="/register" >Sign Up</a>
+                    Dont have account ?<a href="/register" >Sign Up</a>
                 </div>
                 </form>
             </div>
