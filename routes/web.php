@@ -34,11 +34,19 @@ Route::middleware('only_guest')->group(function(){
 });
 
 Route::get('logout', [AuthController::class, 'logout'])->middleware('auth');
+
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'only_admin']);
+
 Route::get('datauser', [DatauserController::class, 'index'])->middleware(['auth', 'only_admin']);
+
 Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'only_admin']);
-Route::get('kategori', [KategoriController::class, 'index'])->middleware(['auth', 'only_admin']);
+
+Route::get('kategori', [KategoriController::class, 'index']);
+Route::get('kategoriadd', [KategoriController::class, 'add']);
+Route::post('kategori-add', [KategoriController::class, 'store']);
+//Route::get('kategori-add', [KategoriController::class, 'add']);
 Route::get('kategoribarang', [KategoriBarangController::class, 'index'])->middleware(['auth', 'only_admin']);
+
 Route::get('sewalogs', [SewaLogsController::class, 'index'])->middleware(['auth', 'only_admin']);
 
 
