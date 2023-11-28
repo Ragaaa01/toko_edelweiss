@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\OutdoorController;
 use App\Http\Controllers\DatauserController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\SewaLogsController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriBarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +36,10 @@ Route::middleware('only_guest')->group(function(){
 Route::get('logout', [AuthController::class, 'logout'])->middleware('auth');
 Route::get('dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'only_admin']);
 Route::get('datauser', [DatauserController::class, 'index'])->middleware(['auth', 'only_admin']);
+Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 Route::get('kategori', [KategoriController::class, 'index'])->middleware(['auth', 'only_admin']);
+Route::get('kategoribarang', [KategoriBarangController::class, 'index'])->middleware(['auth', 'only_admin']);
+Route::get('sewalogs', [SewaLogsController::class, 'index'])->middleware(['auth', 'only_admin']);
 
 
 Route::get('home', [UserController::class, 'home'])->middleware(['auth', 'only_client']);
