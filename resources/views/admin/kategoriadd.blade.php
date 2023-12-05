@@ -11,7 +11,7 @@
         @csrf
         <div>
             <label for="nama" class="form-label">Nama</label>
-            <input type="text" nama="nama" id="nama" class="form-controls">
+            <input type="text" name="name" id="nama" class="form-controls">
         </div>
 
         <div class="mt-3">

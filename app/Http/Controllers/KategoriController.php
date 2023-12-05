@@ -20,6 +20,6 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $kategori = Kategori::create($request->all());
-        return redirect('admin.kategori');
+        return redirect('kategori');
     }
 }
