@@ -7,7 +7,7 @@
 <h1>Add New Kategori</h1>
 
 <div class="mt-5 w-70">
-    <form action="kategori-add" method="post">
+    <form action="kategoriadd" method="post">
         @csrf
         <div>
             <label for="nama" class="form-label">Nama</label>

@@ -43,7 +43,7 @@ Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'o
 
 Route::get('kategori', [KategoriController::class, 'index']);
 Route::get('kategoriadd', [KategoriController::class, 'add']);
-Route::post('kategori-add', [KategoriController::class, 'store']);
+Route::post('kategoriadd', [KategoriController::class, 'store']);
 //Route::get('kategori-add', [KategoriController::class, 'add']);
 Route::get('kategoribarang', [KategoriBarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 

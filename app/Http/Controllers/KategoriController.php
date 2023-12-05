@@ -14,12 +14,12 @@ class KategoriController extends Controller
     
     public function add()
     {
-        return view('admin.kategori-add');
+        return view('admin.kategoriadd');
     }
 
     public function store(Request $request)
     {
         $kategori = Kategori::create($request->all());
-        return redirect('kategori');
+        return redirect('admin.kategori');
     }
 }

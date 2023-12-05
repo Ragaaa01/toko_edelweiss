@@ -23,7 +23,7 @@
                 @foreach ($kategori as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama }}</td>
+                    <td>{{ $item->name }}</td>
                     <td>
                         <a href="#">edit</a>
                         <a href="#">delete</a>
