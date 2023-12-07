@@ -10,7 +10,14 @@
         <a href="kategoriadd" class="btn btn-primary">Add Data</a>
     </div>
 
-    <div class="my-5">
+    <div class="mt-5">
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+        @endif
+    </div>
+        <div class="my-5">
         <table class="table">
             <thead>
                 <tr>
@@ -25,8 +32,8 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->name }}</td>
                     <td>
-                        <a href="#">edit</a>
-                        <a href="#">delete</a>
+                        <a href="kategori-edit/{{$item->slug}}">edit</a>
+                        <a href="kategori-delete/{{$item->slug}}">delete</a>
                     </td>
                 </tr>
                 @endforeach

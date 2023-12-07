@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
-@section('title', 'Add Kategori')
+@section('title', 'Edit Kategori')
 
 @section('content')
     
-<h1>Add New Kategori</h1>
+<h1>Edit Kategori</h1>
 
 <div class="mt-5 w-70">
 
@@ -18,15 +18,16 @@
     </div>
 @endif
 
-    <form action="kategoriadd" method="post">
+    <form action="/kategori-edit/{{$kategori->slug}}" method="POST">
         @csrf
+        @method('put')
         <div>
             <label for="name" class="form-label">Nama</label>
-            <input type="text" name="name" id="name" class="form-controls">
+            <input type="text" name="name" id="name" value="{{$kategori->name}}" class="form-controls">
         </div>
 
         <div class="mt-3">
-            <button class="btn btn-success"type="submit">Save</Button>
+            <button class="btn btn-success"type="submit">Update</Button>
         </div>
     </form>
 </div>

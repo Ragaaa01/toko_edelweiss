@@ -44,10 +44,14 @@ Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'o
 Route::get('kategori', [KategoriController::class, 'index']);
 Route::get('kategoriadd', [KategoriController::class, 'add']);
 Route::post('kategoriadd', [KategoriController::class, 'store']);
-//Route::get('kategori-add', [KategoriController::class, 'add']);
+Route::get('kategori-edit/{slug}', [KategoriController::class, 'edit']);
+Route::put('kategori-edit/{slug}', [KategoriController::class, 'update']);
+Route::get('kategori-delete/{slug}', [KategoriController::class, 'delete']);
+
 Route::get('kategoribarang', [KategoriBarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 
 Route::get('sewalogs', [SewaLogsController::class, 'index'])->middleware(['auth', 'only_admin']);
+
 
 
 Route::get('home', [UserController::class, 'home'])->middleware(['auth', 'only_client']);
