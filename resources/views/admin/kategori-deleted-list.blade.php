@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
-@section('title', 'Kategori')
+@section('title', 'Deleted Kategori')
 
 
 @section('content')
-    <h1>Kategori List</h1>
+    <h1>Deleted Kategori List</h1>
 
     <div class="mt-5 d-flex justify-content-end">
         <a href="kategori-deleted" class="btn btn-secondary me-5">View Deleted Data</a>
