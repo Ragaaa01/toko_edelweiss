@@ -41,6 +41,7 @@ Route::get('datauser', [DatauserController::class, 'index'])->middleware(['auth'
 
 Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 
+// KATEGORI
 Route::get('kategori', [KategoriController::class, 'index']);
 Route::get('kategoriadd', [KategoriController::class, 'add']);
 Route::post('kategoriadd', [KategoriController::class, 'store']);
@@ -49,6 +50,7 @@ Route::put('kategori-edit/{slug}', [KategoriController::class, 'update']);
 Route::get('kategori-delete/{slug}', [KategoriController::class, 'delete']);
 Route::get('kategori-destroy/{slug}', [KategoriController::class, 'destroy']);
 Route::get('kategori-deleted-list', [KategoriController::class, 'deletedKategori']);
+Route::get('kategori-restore/{slug}', [KategoriController::class, 'restore']);
 
 Route::get('kategoribarang', [KategoriBarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 

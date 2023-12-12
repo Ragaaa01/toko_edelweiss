@@ -54,12 +54,19 @@ class KategoriController extends Controller
     {
         $kategori = Kategori::where('slug', $slug)->first();
         $kategori->delete();
-        return redirect('kategori')->with('status', 'Kategori Berhasil Ditambahkan');
+        return redirect('kategori')->with('status', 'Kategori Berhasil Dihapus');
     }
 
     public function deletedKategori()
     {
         $deletedKategori = Kategori::onlyTrashed()->get();
         return view('admin.kategori-deleted-list', ['deletedKategori' => $deletedKategori]);
+    }
+
+    public function restore($slug)
+    {
+        $kategori = Kategori::withTrashed()->where('slug', $slug)->first();
+        $kategori->restore();
+        return redirect('kategori')->with('status', 'Kategori Berhasil Dikembalikan');
     }
 }

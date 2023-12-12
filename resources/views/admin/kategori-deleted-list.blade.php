@@ -7,8 +7,7 @@
     <h1>Deleted Kategori List</h1>
 
     <div class="mt-5 d-flex justify-content-end">
-        <a href="kategori-deleted" class="btn btn-secondary me-5">View Deleted Data</a>
-        <a href="kategoriadd" class="btn btn-primary">Add Data</a>
+        <a href="kategori" class="btn btn-primary">Kembali</a>
     </div>
 
     <div class="mt-5">
@@ -28,13 +27,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kategori as $item)
+                @foreach ($deletedKategori as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->name }}</td>
                     <td>
-                        <a href="kategori-edit/{{$item->slug}}">edit</a>
-                        <a href="kategori-delete/{{$item->slug}}">delete</a>
+                        <a href="kategori-restore/{{$item->slug}}">restore</a>
                     </td>
                 </tr>
                 @endforeach
