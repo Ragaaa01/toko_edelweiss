@@ -24,7 +24,7 @@
                 <tr>
                     <th>Nomor</th>
                     <th>Nama</th>
-                    <th>Jenis</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
