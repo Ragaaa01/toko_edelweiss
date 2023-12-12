@@ -39,7 +39,10 @@ Route::get('dashboard', [DashboardController::class, 'index'])->middleware(['aut
 
 Route::get('datauser', [DatauserController::class, 'index'])->middleware(['auth', 'only_admin']);
 
+//BARANG
 Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'only_admin']);
+Route::get('barangadd', [BarangController::class, 'add']);
+Route::post('barangadd', [BarangController::class, 'store']);
 
 // KATEGORI
 Route::get('kategori', [KategoriController::class, 'index']);

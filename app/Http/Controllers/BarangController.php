@@ -12,4 +12,15 @@ class BarangController extends Controller
         $barang = Barang::all();
         return view('admin.barang', ['barang'=> $barang]);
     }
+
+    public function add()
+    {
+        return view('admin.barangadd');
+    }
+
+    public function store(Request $request)
+    {
+        $barang = Barang::create($request->all());
+        return redirect('barang')->with('status', 'Barang Berhasil Ditambahkan');
+    }
 }
