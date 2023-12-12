@@ -48,7 +48,7 @@ Route::get('kategori-edit/{slug}', [KategoriController::class, 'edit']);
 Route::put('kategori-edit/{slug}', [KategoriController::class, 'update']);
 Route::get('kategori-delete/{slug}', [KategoriController::class, 'delete']);
 Route::get('kategori-destroy/{slug}', [KategoriController::class, 'destroy']);
-Route::get('kategori-deleted', [KategoriController::class, 'deletedKategori']);
+Route::get('kategori-deleted-list', [KategoriController::class, 'deletedKategori']);
 
 Route::get('kategoribarang', [KategoriBarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 

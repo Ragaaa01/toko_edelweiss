@@ -60,6 +60,6 @@ class KategoriController extends Controller
     public function deletedKategori()
     {
         $deletedKategori = Kategori::onlyTrashed()->get();
-        return view('kategori-deleted-list', ['deletedKategori' => $deletedKategori]);
+        return view('admin.kategori-deleted-list', ['deletedKategori' => $deletedKategori]);
     }
 }

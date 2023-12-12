@@ -7,7 +7,7 @@
     <h1>Kategori List</h1>
 
     <div class="mt-5 d-flex justify-content-end">
-        <a href="kategori-deleted" class="btn btn-secondary me-5">View Deleted Data</a>
+        <a href="kategori-deleted-list" class="btn btn-secondary me-5">View Deleted Data</a>
         <a href="kategoriadd" class="btn btn-primary">Add Data</a>
     </div>
 
