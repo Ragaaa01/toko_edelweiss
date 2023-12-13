@@ -21,4 +21,14 @@ class Barang extends Model
             ]
             ];
     }
+
+    /** 
+     * The categories that belong to the book
+     * 
+     * @return \Illuminate\Database\Eloquent\BelongsToMany
+     */
+    public function categories(): BelongsToMany
+    {
+        return $this->belongToMany(Category::class, 'role_user_table', 'user_id', 'role_id');
+    }
 }

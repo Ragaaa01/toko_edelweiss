@@ -20,6 +20,17 @@ class BarangController extends Controller
 
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'nama_barang' => 'required|max:255',
+        ]);
+        $newName = '';
+        if($request->file('image')){
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $newName = $request->nama_gambar.'.'.now()->timestamp.'.'.$extension;
+            $request->file('image')->storeAs('gambar', $newName);
+        }
+        $request['gambar'] = $newName;
+
         $barang = Barang::create($request->all());
         return redirect('barang')->with('status', 'Barang Berhasil Ditambahkan');
     }
