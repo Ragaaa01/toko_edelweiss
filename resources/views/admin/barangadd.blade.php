@@ -3,7 +3,7 @@
 @section('title', 'Add Barang')
 
 @section('content')
-    
+<!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
 <h1>Add New Barang</h1>
 
 <div class="mt-5 w-70">
@@ -40,21 +40,30 @@
             <label for="stok" class="form-label">Stok Barang</label>
             <input type="text" name="stok" id="stok" class="form-control" placeholder="Stok Barang" value="{{old('stok')}}">
         </div>
-        <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <input type="text" name="status" id="status" class="form-control" placeholder="Status" value="{{old('status')}}">
-        </div>
         <div class="">
             <label for="deskripsi" class="">Deskripsi</label>
             <br>
         <textarea name="deskripsi" id="deskripsi" cols="120" rows="15" value="{{old('deskripsi')}}"></textarea>
+        </div> <div class="mb-3">
+            <label for="kategori" class="form-label">Kategori</label>
+            <select name="kategori[]" id="kategori" class="form-control"  >
+            <option value="">Pilih Kategori</option>
+                @foreach ($kategori as $item)
+                <option value="{{$item->id}}">{{$item->name}}</option>
+                @endforeach
+            </select>
         </div>
-        
 
         <div class="mt-3">
             <button class="btn btn-success"type="submit">Save</Button>
         </div>
     </form>
 </div>
-
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('.select-multiple').select2();
+});
+</script> -->
 @endsection

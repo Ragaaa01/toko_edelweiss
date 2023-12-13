@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Barang;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -15,11 +16,13 @@ class BarangController extends Controller
 
     public function add()
     {
-        return view('admin.barangadd');
+        $kategori = Kategori::all();
+        return view('admin.barangadd', ['kategori' => $kategori]);
     }
 
     public function store(Request $request)
     {
+        dd($request->all());  
         $validated = $request->validate([
             'nama_barang' => 'required|max:255',
         ]);

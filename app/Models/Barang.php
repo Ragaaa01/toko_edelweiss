@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Kategori;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Barang extends Model
 {
@@ -27,8 +29,8 @@ class Barang extends Model
      * 
      * @return \Illuminate\Database\Eloquent\BelongsToMany
      */
-    public function categories(): BelongsToMany
+    public function kategori(): BelongsToMany
     {
-        return $this->belongToMany(Category::class, 'role_user_table', 'user_id', 'role_id');
+        return $this->belongToMany(Kategori::class, 'kategori_barang', 'barang_id', 'kategori_id');
     }
 }
