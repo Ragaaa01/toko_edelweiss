@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Data Barang')
-@section('phead', 'Data Barang')
-@section('content')
-    <h1>Ini halaman data barang</h1>
+@section('title', 'Deleted Barang')
 
-    <div class="my-5 d-flex justify-content-end">
-        <a href="barang-deleted-list" class="btn btn-secondary me-5">View Deleted Data</a>
-        <a href="barangadd" class="btn btn-primary">Add Data</a>
+
+@section('content')
+    <h1>Deleted Kategori List</h1>
+
+    <div class="mt-5 d-flex justify-content-end">
+        <a href="barang" class="btn btn-primary">Kembali</a>
     </div>
 
     <div class="mt-5">
@@ -17,8 +17,7 @@
         </div>
         @endif
     </div>
-    
-    <div class="my-5">
+        <div class="my-5">
         <table class="table">
             <thead>
                 <tr>
@@ -31,11 +30,10 @@
                     <th>Status</th>
                     <th>Kategori</th>
                     <th>Deskripsi</th>
-                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($barang as $item)
+                @foreach ($deletedBarang as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->nama_barang }}</td>
@@ -51,12 +49,10 @@
                     </td>
                     <td>{{ $item->deskripsi }}</td>
                     <td>
-                        <a href="barang-edit/{{$item->slug}}">edit</a>
-                        <a href="barang-delete/{{$item->slug}}">delete</a>
+                        <a href="barang-restore/{{$item->slug}}">restore</a>
                     </td>
                 </tr>
                 @endforeach
-            </tbody>
         </table>
     </div>
 @endsection

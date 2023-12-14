@@ -5,12 +5,15 @@ namespace App\Models;
 use App\Models\Kategori;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Barang extends Model
 {
     use Sluggable;
+    use SoftDeletes;
+    
     protected $table = 'barang';
     protected $fillable = [
         'nama_barang', 'harga_sewa', 'gambar', 'brand', 'stok', 'deskripsi', 'slug'
@@ -31,6 +34,6 @@ class Barang extends Model
      */
     public function kategori(): BelongsToMany
     {
-        return $this->belongToMany(Kategori::class, 'kategori_barang', 'barang_id', 'kategori_id');
+        return $this->belongsToMany(Kategori::class, 'kategori_barang', 'barang_id', 'kategori_id');
     }
 }

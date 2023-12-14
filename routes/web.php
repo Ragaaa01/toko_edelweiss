@@ -43,6 +43,12 @@ Route::get('datauser', [DatauserController::class, 'index'])->middleware(['auth'
 Route::get('barang', [BarangController::class, 'index'])->middleware(['auth', 'only_admin']);
 Route::get('barangadd', [BarangController::class, 'add']);
 Route::post('barangadd', [BarangController::class, 'store']);
+Route::get('barang-edit/{slug}', [BarangController::class, 'edit']);
+Route::post('barang-edit/{slug}', [BarangController::class, 'update']);
+Route::get('barang-delete/{slug}', [BarangController::class, 'delete']);
+Route::get('barang-destroy/{slug}', [BarangController::class, 'destroy']);
+Route::get('barang-deleted-list', [BarangController::class, 'deletedBarang']);
+Route::get('barang-restore/{slug}', [BarangController::class, 'restore']);
 
 // KATEGORI
 Route::get('kategori', [KategoriController::class, 'index']);
