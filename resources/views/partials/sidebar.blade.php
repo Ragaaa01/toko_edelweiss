@@ -2,8 +2,8 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/dashboard') }}">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon">
+                <img src="{{ asset('image/logo.jpg')}}" alt="" width="50px">
                 </div>
                 <div class="sidebar-brand-text mx-3">Edelweiss Admin <sup>2</sup></div>
             </a>

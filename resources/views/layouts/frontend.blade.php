@@ -28,6 +28,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
+        <img src="{{ asset('image/logo.jpg')}}" alt="" width="50px">
         <a class="navbar-brand" href="home">EDELWEISS</a>
         <button
           class="navbar-toggler"
@@ -59,13 +60,7 @@
     <!-- Header-->
     @yield('content')
     <!-- Footer-->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
-        </p>
-      </div>
-    </footer>
+   @include('layouts.footer')
     <!-- Bootstrap core JS-->
     <script src="{{ asset('frontend/js/bootstrap.js') }}"></script>
     <!-- Core theme JS-->

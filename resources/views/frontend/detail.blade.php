@@ -17,7 +17,7 @@
               <!-- Product image-->
               <img
                 class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                src="{{ asset('image/tenda.png')}}"
                 alt="..."
               />
               <!-- Product details-->
@@ -31,26 +31,7 @@
                     voluptatum illum dignissimos facilis alias facere rem
                     consequatur?
                   </p>
-                  <div class="mobil-info-list border-top pt-4">
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>P3K</span>
-                      </li>
-                      <li>
-                        <i class="ri-close-circle-line text-secondary"></i>
-                        <span>CHARGER</span>
-                      </li>
-                      <li>
-                        <i class="ri-close-circle-line text-secondary"></i>
-                        <span>AUDIO</span>
-                      </li>
-                      <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>AC</span>
-                      </li>
-                    </ul>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -64,31 +45,25 @@
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
-                    <h5 class="fw-bolder">Special Item</h5>
+                    <h5 class="fw-bolder">Tenda</h5>
                     <div class="rent-price mb-3">
                       <span style="font-size: 1rem" class="text-primary"
-                        >Rp.200.000/</span
-                      >day
+                        >Rp.20.000/</span
+                      >hari
                     </div>
                   </div>
                   <ul class="list-unstyled list-style-group">
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
-                      <span>Bahan Bakar</span>
-                      <span style="font-weight: 600">Bensin</span>
+                      <span>Merek</span>
+                      <span style="font-weight: 600">Eiger</span>
                     </li>
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
-                      <span>Jumlah Kursi</span>
-                      <span style="font-weight: 600">5</span>
-                    </li>
-                    <li
-                      class="border-bottom p-2 d-flex justify-content-between"
-                    >
-                      <span>Transmisi</span>
-                      <span style="font-weight: 600">Manual</span>
+                      <span>Stok</span>
+                      <span style="font-weight: 600">50</span>
                     </li>
                   </ul>
                 </div>

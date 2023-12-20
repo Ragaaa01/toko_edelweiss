@@ -3,5 +3,5 @@
 @section('title', 'Data User')
 @section('phead', 'Data User')
 @section('content')
-    <h1>Ini halaman data user</h1>
+    <h1>User List</h1>
 @endsection

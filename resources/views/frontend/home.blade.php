@@ -31,7 +31,7 @@
               <!-- Product image-->
               <img
                 class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                src="{{ asset('image/tenda.png')}}"
                 alt="..."
               />
               <!-- Product details-->
@@ -84,7 +84,7 @@
               <!-- Product image-->
               <img
                 class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                src="{{ asset('image/sleeping bag.jpeg')}}"
                 alt="..."
               />
               <!-- Product details-->
@@ -137,7 +137,7 @@
               <!-- Product image-->
               <img
                 class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                src="{{ asset('image/carrier.jpeg')}}"
                 alt="..."
               />
               <!-- Product details-->
