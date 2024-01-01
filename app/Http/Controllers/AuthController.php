@@ -33,7 +33,7 @@ class AuthController extends Controller
                 $request->session()->invalidate();
                 $request->session()->regenerateToken();
                 Session::flash('status', 'failed');
-                Session::flash('message', 'Akunmu belum aktif. Coba kontak admin!!');
+                Session::flash('message', 'Akunmu belum aktif, Tunggu dalam 24 jam!!');
                 return redirect('/login');
             }
             //$request->session()->regenerate();
@@ -55,7 +55,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('login');
+        return redirect('/');
     }
 
     public function registerProcess(Request $request)
@@ -72,7 +72,7 @@ class AuthController extends Controller
         $user = User::create($request->all());
 
         Session::flash('status', 'success');
-        Session::flash('message', 'Register succes. Wait admin for approval');
+        Session::flash('message', 'Pendaftaran berhasil, Akun akan aktif dalam 1 x 24 jam');
         return redirect('register');
     }
     

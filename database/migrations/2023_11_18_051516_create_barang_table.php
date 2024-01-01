@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('gambar');
             $table->string('brand');
             $table->integer('stok');
-            $table->string('status')->default('in stock');
+            $table->string('status')->default('tersedia');
             $table->text('deskripsi');
             $table->timestamps();
         });

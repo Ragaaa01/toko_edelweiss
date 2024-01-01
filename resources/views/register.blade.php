@@ -3,6 +3,7 @@
 @section('title', 'Register')
 
 @section('content')
+<a href="/"><h5>< Kembali</h5></a>
 <div class="container mt-5">   
 @if ($errors->any())
                     <div class="alert alert-danger">

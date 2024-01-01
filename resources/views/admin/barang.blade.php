@@ -25,7 +25,7 @@
                     <th>No</th>
                     <th>Nama Barang</th>
                     <th>Harga Sewa</th>
-                    <!-- <th>Gambar</th> -->
+                    <th>Gambar</th>
                     <th>Brand</th>
                     <th>Stok</th>
                     <th>Status</th>
@@ -39,8 +39,8 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->nama_barang }}</td>
-                    <td>{{ $item->harga_sewa }}</td>
-                    <!-- <td>{{ $item->gambar }}</td> -->
+                    <td>Rp {{ $item->harga_sewa }}</td>
+                    <td>{{ asset('storage/gambar/'.$item->gambar) }}</td>
                     <td>{{ $item->brand }}</td>
                     <td>{{ $item->stok }}</td>
                     <td>{{ $item->status }}</td>

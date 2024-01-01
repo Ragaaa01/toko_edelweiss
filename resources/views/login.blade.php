@@ -3,10 +3,11 @@
 @section('title', 'Login')
 
 @section('content')
+<a href="/"><h5>< Kembali</h5></a>
     <div class="container mt-5">   
-        <div class="row justify-content-center">       
+        <div class="row justify-content-center bg-transparent">       
         <div class="col-md-6">
-            <div class="card">
+            <div class="card ">
             <div class="card-header">
                 <h2 class="text-center">Login</h2>
             </div>

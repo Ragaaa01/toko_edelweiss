@@ -26,7 +26,7 @@
         </div>
         <div class="mb-3">
             <label for="harga_sewa" class="form-label">Harga Sewa</label>
-            <input type="text" name="harga_sewa" id="harga_sewa" class="form-control" placeholder="Harga Sewa" value="{{old('harga_sewa')}}">
+            <input type="text" name="harga_sewa" id="harga_sewa" class="form-control" placeholder="Rp." value="{{old('harga_sewa')}}">
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Gambar</label>

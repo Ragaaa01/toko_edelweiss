@@ -1,17 +1,13 @@
-@extends('layouts.frontend')
+@extends('layouts.public-')
 
 @section('title', 'Home')
 @section('content')
-<style>
-  .header{
-    background-size: cover
-  }
-</style>
-<header class="py-5 " style="background-image: url('image/bg1.jpg')" >
-      <div class="container px-4 px-lg-5 my-5">
+<header style="background-image: url('image/bg1.jpg')" class="py-5">
+  
+      <div class="container px-2 px-lg-2 my-5">
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">EDELWEISS OUTDOOR</h1>
-          <p class="lead fw-normal text-white-50 mb-0">
+          <p class="lead fw-normal text-white-80 mb-0">
             Penyewaan outdoor
           </p>
         </div>
@@ -48,7 +44,7 @@
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
         >
         @foreach ($barang as $item)
-          <div class="col mb-5">
+          <div class="col mb-5 bg-transparent">
             <div class="card h-100">
               <!-- Sale badge-->
               <div

@@ -1,12 +1,8 @@
 @extends('layouts.admin')
 
 @section('title', 'Data User')
-@section('phead', 'Data User')
+@section('phead', 'Data Banned User List')
 @section('content')
-<div class="mt-5 d-flex justify-content-end">
-        <a href="user-banned-list" class="btn btn-secondary me-5">Data Blokir User</a>
-        <a href="registered-user" class="btn btn-primary">Data User Baru</a>
-    </div>
 
     <div class="mt-5">
         @if (session('status'))
@@ -29,7 +25,7 @@
                 </tr>
             </thead>
             <tbody>              
-                    @foreach ($users as $item)
+                    @foreach ($bannedUser as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->name }}</td>
@@ -37,8 +33,7 @@
                         <td>{{ $item->no_telpon }}</td>
                         <td>{{ $item->alamat }}</td>
                         <td>
-                            <a href="user-detail/{{$item->slug}}">detail</a> |
-                            <a href="user-ban/{{$item->slug}}">ban user</a>
+                            <a href="user-restore/{{$item->slug}}">restore</a>
                         </td>
                     </tr>
                     @endforeach
